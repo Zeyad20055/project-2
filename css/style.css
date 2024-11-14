@@ -1,0 +1,638 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    perspective: 600px;
+}
+header{
+    /* background-color: blanchedalmond; */
+    width: 100%;
+    height: 100px;
+   
+}
+header img{
+margin-left: 110px;
+float: left;
+}
+
+nav{
+    display: inline-block;
+    margin-top: 40px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    margin-left: 100px;
+    cursor: pointer;
+
+}
+nav ul li{
+    margin-left: 45px;
+    font-size:25px
+}
+
+/* nav ul li:hover{
+    border-bottom:2px solid black
+} */
+nav ul li::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid peachpuff; /* لون المستطيل */
+  transform: scaleX(0);
+  margin-left:  -2px;
+  transform-origin: right;
+  transition: transform 0.4s ease
+}
+nav ul li:hover::before{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.k{
+  font-size: 23px;
+  word-spacing: 5px;
+  width: 250px;
+    margin-left: 60px;
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-between;
+}
+.k i:hover{
+    opacity: 0.5;
+    border: none;
+}
+.head-tabel{
+    /* display:none */
+    visibility: hidden;
+    position: relative;
+    z-index: 5;
+    margin-left:320px;
+    margin-top: -30px;
+  float: left;
+  
+  
+
+  }
+  .head-tabel table{
+    background-color:blanchedalmond;
+    text-align: center;
+    width: 350px;
+  }
+   header:active ~ .head-tabel{
+   visibility: visible;
+    
+  }
+
+  th{
+  
+margin-left: 20px;
+  color: rgb(78, 48, 4);
+  
+  }
+  
+
+/*------------------------the Egyptian --------------------------*/
+.parnet{
+    background-color: sandybrown;
+    width: 90%;
+    height: 600px;
+margin-left: 78px;
+position: relative;
+
+}
+.overflow{
+    width: 100%;
+    height: 100%;
+    background:rgb(0, 0, 0, 0.5);
+   
+}
+span{
+    color: blanchedalmond;
+}
+.content{
+    color: azure;
+  
+}
+.relice1{
+
+ margin: -210px 0 0 90px;
+}
+.relice1 h1{
+    font-size: 60px ;
+    /* margin-top: -20px; */
+}
+.content img{
+margin-left: 820px;
+margin-top: 60px;
+
+}
+.rlice{
+    background-color:bisque;
+    width: 110px;
+    height: 35px;
+ 
+    border-radius: 5px;
+    /* border: none; */
+    /* margin: 0 auto; */
+    margin-left: 75px;
+    font-size: 15px;
+    cursor: pointer;
+  
+}
+.rlice:hover{
+  opacity: 0.5;
+}
+/*!------------------------------------------------------*/
+/*---------------------------pharaoh------------------------------*/
+.pharaoh-relice{
+    text-align: center;
+    font-size: 40px;
+    color:saddlebrown;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.border1{
+    width: 100px;
+    height: 4px;
+    border-radius: 20px;
+    background-color: burlywood;
+    margin: 5px auto;
+    transition: 1s;
+}
+.border1:hover{
+  transform: scale(2,2)
+}
+.pharaoh{
+    margin-top: 30px;
+
+    width: 80%;
+    display: grid;
+    grid-template-columns: 320px  320px  320px  320px ;
+    grid-template-rows: 320px 100px 320px 120px;
+    gap: 10px;
+    grid-template-areas: 
+    "reli1 reli2 reli3 reli4"
+    "reli5 reli5 reli5 reli5"
+    " reli6  reli6  reli7 reli8 "
+    "reli9 reli9 reli9 reli9";
+    margin-left: 135px;
+}
+.pharaoh div{
+    background-color: rgba(222, 184, 135 );
+}
+
+.reli1{
+    grid-area:reli1 ;
+    background-image: url(../imge/ph1.jpeg);
+    background-size: cover;
+    background-position: 5px;
+  padding-bottom: -20px;
+    
+}
+.reli2{
+    grid-area:reli2 ;
+    background-image: url(../imge/ph2.jpeg);
+    background-size: cover;
+    background-position: 5px;
+  padding-bottom: -20px;
+    
+}
+.reli3{
+    grid-area:reli3 ;
+    background-image: url(../imge/ph3.jpeg);
+    background-size: cover;
+    background-position: 5px;
+  padding-bottom: -20px;
+    
+}
+.reli4{
+    grid-area:reli4 ;
+    background-image: url(../imge/ph5.jpeg);
+    background-size: cover;
+    background-position: 5px;
+  padding-bottom: -20px;
+    
+}
+.reli4:hover~.reli5 .h6 i , .reli3:hover~.reli5 .h5 i , .reli2:hover~.reli5 .h4 i , .reli1:hover~.reli5 .h3 i{
+  visibility: visible;
+}
+.reli5 .h6 i ,.reli5 .h5 i  ,.reli5 .h4 i  ,.reli5 .h3 i{
+  background-color:saddlebrown;
+  width: 28px;
+  height: 28px;
+font-size: 25px;
+text-align: center;
+visibility: hidden;
+}
+.reli5{
+    grid-area:reli5 ;
+    display: flex;
+    font-size: 18px;
+}
+.reli6{
+    grid-area:reli6 ;
+    display: flex;
+}
+.reli6 p i{
+ font-size: 35px;
+
+
+}
+
+.reli7{
+    grid-area:reli7 ;
+    background-image: url(../imge/p1.jpeg);
+    background-size: cover;
+    background-position: 5px;
+  padding-bottom: -20px;
+  transition: 1s;
+}
+.reli7:hover{
+  transform: scale(1.1,1.1);
+}
+.reli8{
+    grid-area:reli8 ;
+    background-image: url(../imge/p2.jpeg);
+    background-size: cover;
+    background-position: 5px;
+  padding-bottom: -20px;
+  transition: 1s;
+}
+.reli8:hover{
+  transform: scale(1.1,1.1);
+}
+
+.reli9 {
+    grid-area:reli9 ;
+    /* display: grid; */
+    column-count: 5;
+    column-width: 70px;
+    column-gap: 10px;
+    column-rule: 5px solid  rgba(255, 228, 196,0.8);
+    font-size: 20px;
+    text-align: center;
+  
+position: relative;
+
+  }
+
+
+.reli9 h4{
+    color:bisque
+}
+.reli9 i{
+    color: rgba(255, 228, 196,0.8);
+    font-size: 35px;
+    
+}
+.reli9 i:hover{
+    color:saddlebrown
+}
+.reli5 h3 span{
+    color: saddlebrown;
+   font-size: 15px;
+
+}
+.reli5 .h3{
+   margin-left: 5px;
+   color:#fff
+ 
+}
+.hr{
+  width: 82%;
+  height: 1px;
+  background-color: black;
+margin-left: 140px;
+}
+.reli5 .h4,.reli5 .h5 ,.reli5 .h6 {
+   margin-left: 85px;
+   color:#fff
+ 
+}
+
+.rep6{
+  
+     font-size: 19px; 
+     margin-left: 20px;
+   
+}
+.rep6 i{
+    font-size: 30px;
+}
+.re6{
+    color: black;
+    font-size: 25px;
+}
+.re60{
+    margin-left: 30px;
+    font-size: 22px;
+}
+.reli7 p ,.reli8 p{
+    color: peachpuff;
+}
+.reli7 h3 ,.reli8 h3{
+    font-size: 22px;
+    color:#fff
+}
+.reli6   .border2 , .border3 ,.border4{
+width: 50px;
+height: 5px;
+
+background-color: black;
+}
+.outline i{
+  position: relative;
+ /* display: inline-block; */
+ transition: 0.4s;
+ cursor: pointer;
+ opacity: 0.6;
+}
+.outline i:hover{
+  transform: translateY(-10px);
+  opacity: 1;
+ 
+}
+
+/**--------------------------------pharaoh-------------------------------------------*/
+/**----------------------------------price-antiques---------------*/
+  .price-header ul{
+    list-style: none;
+    text-align: center;
+   display: flex;
+   font-size: 20px;
+
+  }
+  .price-header ul li{
+    margin-left: 30px;
+    cursor: pointer;
+  }
+  .price-header ul li::selection{
+    color: burlywood;
+  }
+  .price-header {
+    display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 20px;
+
+  }
+.price-antiques{
+    
+        margin-top: 30px;
+    
+        width: 80%;
+        display: grid;
+        grid-template-columns: 426px 426px 426px  ;
+        grid-template-rows: 395px 100px 395px 120px;
+        gap: 18px;
+        grid-template-areas: 
+        "antiquse1 antiquse2 antiquse3 "
+        "antiquse4 antiquse4 antiquse4 "
+        " antiquse5 antiquse6 antiquse7 "
+        "antiquse9 antiquse9  antiquse9";
+   place-content: center;
+   margin-left: 170px;
+  }
+  .price-antiques div{
+    border-radius: 10px;
+    background-color: rgba(222, 184, 135,0.5);
+  }
+  .price-antiques img{
+    border-radius: 10px;
+  }
+  .antiquse1{
+
+    grid-area: antiquse1;
+  }
+  .antiquse1 ,.antiquse2 ,.antiquse3 ,.antiquse5 ,.antiquse6 ,.antiquse7{
+    /* background-color: rgb(207, 255, 205); */
+    transform-style:preserve-3d ;
+    transition: 1s;
+    }
+    .antiquse1:hover ,.antiquse2:hover ,.antiquse3:hover ,.antiquse5:hover ,.antiquse6:hover ,.antiquse7:hover{
+      transform: rotatey(180deg);
+    }
+    .antiquse1 ,.front ,.back{
+      
+    }
+    .front ,.back{
+      position: absolute;
+    }
+    .front{
+    z-index: 3;
+    backface-visibility: hidden;
+    }
+    .back{
+background:url(../imge/ar3.png);
+      transform:rotatey(180deg);
+      font-size: 30px;
+      text-align: center;
+      width: 420px;
+      height: 395px;
+
+  
+    }
+    
+     .antiquse2 .back{
+background:url(../imge/ar8.png);
+      transform:rotatey(180deg);
+      font-size: 30px;
+      text-align: center;
+      width: 420px;
+      height: 395px;
+
+  
+    }
+     .antiquse3 .back{
+background:url(../imge/ar5.png);
+      transform:rotatey(180deg);
+      font-size: 30px;
+      text-align: center;
+      width: 420px;
+      height: 395px;
+ 
+  
+    }
+     .antiquse5 .back{
+background:url(../imge/ar1.png);
+      transform:rotatey(180deg);
+      font-size: 30px;
+      text-align: center;
+      width: 420px;
+      height: 395px;
+    
+  
+    }
+     .antiquse6 .back{
+background:url(../imge/ar4.png);
+      transform:rotatey(180deg);
+      font-size: 30px;
+      text-align: center;
+      width: 420px;
+      height: 395px;
+    
+  
+    }
+     .antiquse7 .back{
+background:url(../imge/ar2.png);
+background-repeat: no-repeat;
+      transform:rotatey(180deg);
+      font-size: 30px;
+      text-align: center;
+      width: 420px;
+      height: 395px;
+   
+  
+    }
+
+    .back:hover{
+      display: block;
+    }
+    .back p i{
+      margin-top: 160px;
+      margin-left: 10px;
+      font-size: 25px;
+      color: #fff;
+      text-align: center;
+      cursor: pointer;
+      background-color: rgb(80, 47, 4);
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      padding: 7px;
+    }
+  .antiquse2{
+    grid-area: antiquse2;
+  }
+  .antiquse3{
+    grid-area: antiquse3;
+  
+  }
+  .antiquse4{
+    grid-area: antiquse4;
+    display: flex;
+  }
+ 
+  .h3{
+    margin-left: 5px;
+    color:black
+ }
+ .h3 p,  .h4 p , .h5 p {
+font-size: 15px;
+ }
+ .h3 p b , .h4 p b , .h5 p b{
+font-size: 20px;
+ }
+ 
+ .h4{
+    margin-left: 320px;
+    color:black
+  
+ }
+ .h5{
+    margin-left:310px;
+    color:black
+  
+ }
+ .h6{
+    margin-left:120px;
+    color:#fff
+  
+ }
+  .antiquse5{
+    grid-area: antiquse5;
+  }
+  .antiquse6{
+    grid-area: antiquse6;
+  }
+  .antiquse7{
+    grid-area: antiquse7;
+  }
+  .antiquse8{
+    grid-area: antiquse8;
+  }
+  .antiquse9{
+    grid-area: antiquse9;
+    display: flex;
+  }
+
+
+/*------------------------------foter-coffe----------------------------------------------*/
+.foter-coffe{
+  width: 100%;
+  height: 450px;
+
+ background-image: url(../imge/back8.jpeg);
+  background-size: cover;
+background-position-y: -40px;
+background-repeat: no-repeat;
+  margin-top: 70px;
+}
+.foter-icone{
+  text-align: center;
+}
+.foter-icone1{
+  width: 900px;
+  height: 200px;
+  font-size: 28px;
+  display:inline-block ; /*bottom*/
+  margin: auto;
+  border-radius: 50%;
+  margin-top: -30px;
+  position: relative;
+  padding-right: -5px;
+}
+.ic5 ,.ic4 ,.ic3 ,.ic2 ,.ic1 ,.ic6{
+  background-color:peru;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-top: 5px auto;
+  margin-left: 20px;
+  color: #fff;
+  padding-top: 5px;
+
+}
+.foter-icone img{
+  width: 300px;
+  height: 250px;
+
+}
+.foter-icone h2{
+  margin-top: 25px;
+  font-size: 20px;
+  color: blanchedalmond;
+}
+.ic5:hover ,.ic4:hover ,.ic3:hover ,.ic2:hover ,.ic1:hover ,.ic6:hover{
+  background-color: #cf2323;
+  
+}
+.foter-icone1 i::after{ 
+  content: "";
+  width:100% ;
+  height: 0;
+  position: absolute;
+  bottom:  0;
+  left:0 ;
+  outline: 3px solid rgb(79, 35, 3);
+  border-radius: 50%;
+ padding-left: -3px ;
+  padding-bottom: -3px;
+  text-align: center; 
+cursor: pointer;
+transition: 1s;
+opacity: 0;
+
+}
+.foter-icone1 i:hover::after{
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+  
+    
